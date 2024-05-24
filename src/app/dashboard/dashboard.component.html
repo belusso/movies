@@ -1,0 +1,118 @@
+<div nz-row [nzGutter]="[10, 10]">
+  <div nz-col nzSpan="24" nzMd="24" nzLg="12">
+    <nz-card id="card1" nzTitle="List years with multiple winners">
+      <nz-table #tableYearsWithMultipleWinners [nzLoading]="yearsWithMultipleWinners.loading"
+        [nzData]="yearsWithMultipleWinners.data" nzFrontPagination="false">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Win Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of tableYearsWithMultipleWinners.data">
+            <td>{{data.year}}</td>
+            <td>{{data.winnerCount}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="24" nzMd="24" nzLg="12">
+    <nz-card id="card2" nzTitle="Top 3 studios with winners">
+      <nz-table #tableStudiosWithWinCount [nzLoading]="studiosWithWinCount.loading" [nzData]="studiosWithWinCount.data"
+        nzFrontPagination="false">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Win Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of tableStudiosWithWinCount.data">
+            <td>{{data.name}}</td>
+            <td>{{data.winCount}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="24" nzMd="24" nzLg="12">
+    <nz-card id="card3" nzTitle="Producers with longest and shortest interval between wins">
+      <h2>Maximum</h2>
+      <nz-table id="table1" #tableMaxWinIntervalForProducers [nzLoading]="winIntervalForProducers.loading"
+        [nzData]="winIntervalForProducers.max" nzFrontPagination="false">
+        <thead>
+          <tr>
+            <th>Producer</th>
+            <th>Interval</th>
+            <th>Previous Year</th>
+            <th>Following Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of tableMaxWinIntervalForProducers.data">
+            <td>{{data.producer}}</td>
+            <td>{{data.interval}}</td>
+            <td>{{data.previousWin}}</td>
+            <td>{{data.followingWin}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+      <h2>Minimum</h2>
+      <nz-table id="table2" #tableMinWinIntervalForProducers [nzLoading]="winIntervalForProducers.loading"
+        [nzData]="winIntervalForProducers.min" nzFrontPagination="false">
+        <thead>
+          <tr>
+            <th>Producer</th>
+            <th>Interval</th>
+            <th>Previous Year</th>
+            <th>Following Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of tableMinWinIntervalForProducers.data">
+            <td>{{data.producer}}</td>
+            <td>{{data.interval}}</td>
+            <td>{{data.previousWin}}</td>
+            <td>{{data.followingWin}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="24" nzMd="24" nzLg="12">
+    <nz-card id="card4" nzTitle="List movie winners by year">
+      <div nz-row>
+        <div nz-col nzSpan="21">
+          <nz-input-number nzPlaceHolder="Search by year" [(ngModel)]="yearsMoviesWinnerByYear.filter" [nzMin]="1000"
+            [nzMax]="3000" [nzStep]="1" style="width: 100%">
+          </nz-input-number>
+        </div>
+        <div nz-col nzSpan="3">
+          <button nz-button nzType="primary" (click)="loadYearsMoviesWinnerByYear()"
+            [disabled]="!yearsMoviesWinnerByYear.filter" style="width: 100%">
+            <span nz-icon nzType="search"></span>
+          </button>
+        </div>
+      </div>
+      <nz-table #tableMoviesWinnerByYear [nzLoading]="yearsMoviesWinnerByYear.loading"
+        [nzData]="yearsMoviesWinnerByYear.data" nzFrontPagination="false">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Year</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of tableMoviesWinnerByYear.data">
+            <td>{{data.id}}</td>
+            <td>{{data.year}}</td>
+            <td>{{data.title}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+</div>
