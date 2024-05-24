@@ -1,6 +1,6 @@
 # Projeto de demonstração
 
-Este projete foi criado com Angular 17 e biblioteca de componentes NG-ZORRO.
+Este projete foi criado com Angular 17 + biblioteca de componentes NG-ZORRO.
 
 ## Instalar dependências
 
@@ -8,7 +8,9 @@ Execute `npm install`
 
 ## Servidor de desenvolvimento
 
-Execute `ng serve` para iniciar o ambiente de desenvolvimento, navegue até `http://localhost:4200/`. 
+Execute `ng serve` para iniciar o ambiente de desenvolvimento.
+
+Para acessar o projeto navegue até `http://localhost:4200/`. 
 
 ## Compilar o projeto
 
@@ -18,7 +20,7 @@ Execute `ng build` para compilar o projeto, os artefatos serão armazenados no d
 
 Execute `ng e2e` para rodar os testes end-to-end.
 
-Implementado com puppeteer, iniciando as rotas, alterando os filtros e verificando se as informações foram carregadas nas tabelas.
+Implementados com puppeteer, iniciando as rotas, alterando os filtros e verificando se as informações foram carregadas nas tabelas.
 
 ## Testes unitários
 
