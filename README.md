@@ -1,28 +1,28 @@
-# Projeto de demonstração
+# Demonstration Project
 
-Este projete foi criado com Angular 17 + biblioteca de componentes NG-ZORRO.
+This project was created with Angular 17 + NG-ZORRO component library.
 
-## Instalar dependências
+## Install Dependencies
 
-Execute `npm install` 
+Run `npm install`
 
-## Servidor de desenvolvimento
+## Development Server
 
-Execute `ng serve` para iniciar o ambiente de desenvolvimento.
+Run `ng serve` to start the development environment.
 
-Para acessar o projeto navegue até `http://localhost:4200/`. 
+To access the project, navigate to `http://localhost:4200/`.
 
-## Compilar o projeto
+## Build the Project
 
-Execute `ng build` para compilar o projeto, os artefatos serão armazenados no diretório `dist/`.
+Run `ng build` to build the project. The artifacts will be stored in the `dist/` directory.
 
-## Testes end-to-end
+## End-to-End Tests
 
-Execute `ng e2e` para rodar os testes end-to-end.
+Run `ng e2e` to execute the end-to-end tests.
 
-Implementados com puppeteer, iniciando as rotas, alterando os filtros e verificando se as informações foram carregadas nas tabelas.
+Implemented with Puppeteer, starting routes, changing filters, and verifying if the information was loaded into the tables.
 
-## Testes unitários
+## Unit Tests
 
-Execute `ng test` para executar.
-Implementado com Jasmine e Karma. 
+Run `ng test` to execute.  
+Implemented with Jasmine and Karma.
